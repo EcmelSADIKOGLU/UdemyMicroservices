@@ -35,16 +35,14 @@ namespace FreeCourse.Service.Catalog.Services
             var category = await _categoryCollection.Find<Category>(category => category.Id == id).FirstOrDefaultAsync();
             if (category == null)
             {
-                return Response<CategoryDto>.Fail("Category not found",404);
+                return Response<CategoryDto>.Fail("Category can not found",404);
             }
             else
             {
                 return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), 200);
             }
-
             
         }
-
 
         public async Task<Response<CategoryDto>> CreateAsync(Category category)
         {
@@ -52,9 +50,6 @@ namespace FreeCourse.Service.Catalog.Services
 
             return Response<CategoryDto>.Success(_mapper.Map<CategoryDto>(category), 200);
         }
-
-
-
 
 
 

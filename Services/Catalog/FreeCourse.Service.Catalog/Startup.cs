@@ -30,6 +30,7 @@ namespace FreeCourse.Service.Catalog
         {
 
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICourseService, CourseService>();
 
 
 
