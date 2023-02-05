@@ -2,6 +2,6 @@
 {
     public class Feature
     {
-        internal int Duration { get; set; }
+        public int Duration { get; set; }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Service.Catalog.Services
 {
-    internal interface ICourseService
+    public interface ICourseService
     {
         Task<Response<List<CourseDto>>> GetAllAsync();
         Task<Response<CourseDto>> GetByIDAsync(string id);

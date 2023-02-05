@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FreeCourse.Service.Catalog.Services
 {
-    internal interface ICategoryService
+    public interface ICategoryService
     {
         Task<Response<List<CategoryDto>>> GetAllAsync();
         Task<Response<CategoryDto>> GetByIdAsync(string id);

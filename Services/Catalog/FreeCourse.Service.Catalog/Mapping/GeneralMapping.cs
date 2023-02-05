@@ -4,9 +4,9 @@ using FreeCourse.Service.Catalog.Models;
 
 namespace FreeCourse.Service.Catalog.Mapping
 {
-    internal class GeneralMapping:Profile
+    public class GeneralMapping:Profile
     {
-        internal GeneralMapping()
+        public GeneralMapping()
         {
             CreateMap<Category,CategoryDto>().ReverseMap();
 

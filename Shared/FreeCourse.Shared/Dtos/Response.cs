@@ -16,8 +16,6 @@ namespace FreeCourse.Shared.Dtos
         [JsonIgnore]
         public bool IsSuccessful { get; private set; }
 
-        public int MyProperty { get; set; }
-
         public List<string> Errors { get; set; }
 
 
