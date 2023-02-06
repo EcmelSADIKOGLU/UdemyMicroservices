@@ -65,11 +65,13 @@ namespace FreeCourse.IdentityServer
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     AllowedScopes = 
                     {
+                        IdentityServerConstants.LocalApi.ScopeName,
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
                         "roles"
+
                     },
                     AccessTokenLifetime = 1*60*60, //1 saat saniye cinsinden
                     RefreshTokenExpiration = TokenExpiration.Absolute,
