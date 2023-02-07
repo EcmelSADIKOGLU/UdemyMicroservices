@@ -28,6 +28,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.PhotoStock", "Services\PhotoStock\FreeCourse.Services.PhotoStock\FreeCourse.Services.PhotoStock.csproj", "{C225E156-1631-498B-AEEF-DC8063ECA5D3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{D17BEB30-B1BB-4D33-9FB8-2B537B30350A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Basket", "Services\Basker\FreeCourse.Services.Basket\FreeCourse.Services.Basket.csproj", "{22BF752C-11A3-45E2-9123-0AD6CEFF8A95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,10 @@ Global
 		{C225E156-1631-498B-AEEF-DC8063ECA5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C225E156-1631-498B-AEEF-DC8063ECA5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C225E156-1631-498B-AEEF-DC8063ECA5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BF752C-11A3-45E2-9123-0AD6CEFF8A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BF752C-11A3-45E2-9123-0AD6CEFF8A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BF752C-11A3-45E2-9123-0AD6CEFF8A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BF752C-11A3-45E2-9123-0AD6CEFF8A95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,8 @@ Global
 		{30B8A3CE-1F8E-4432-9370-C356AE8A9203} = {9EA44C5F-2FF8-4C62-B0E8-6F82CC2E684F}
 		{51474BE4-4C44-47E2-AE08-EEA3406435FF} = {9E1E399E-78BD-47A4-8003-0BB939306F44}
 		{C225E156-1631-498B-AEEF-DC8063ECA5D3} = {51474BE4-4C44-47E2-AE08-EEA3406435FF}
+		{D17BEB30-B1BB-4D33-9FB8-2B537B30350A} = {9E1E399E-78BD-47A4-8003-0BB939306F44}
+		{22BF752C-11A3-45E2-9123-0AD6CEFF8A95} = {D17BEB30-B1BB-4D33-9FB8-2B537B30350A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63D0761C-1EB2-4B60-9519-86AE17F15F54}

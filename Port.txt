@@ -3,3 +3,4 @@ Services:
 	IdentityServer : 5001
 	CatalogAPI : 5011
 	PhotoStock : 5012
+	Basket     : 5013
