@@ -19,6 +19,7 @@ namespace FreeCourse.IdentityServer
             new ApiResource("resource_photo_stock"){Scopes = { "photo_stock_fullpermission" } },
             new ApiResource("resource_basket"){Scopes = { "basket_fullpermission" } },
             new ApiResource("resource_discount"){Scopes = { "discount_fullpermission" } },
+            new ApiResource("resource_order"){Scopes = { "order_fullpermission" } },
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -45,6 +46,7 @@ namespace FreeCourse.IdentityServer
                 new ApiScope("photo_stock_fullpermission","Photo_stock api için full erişim."),
                 new ApiScope("basket_fullpermission","Basket api için full erişim."),
                 new ApiScope("discount_fullpermission","Discount api için full erişim."),
+                new ApiScope("order_fullpermission","Order api için full erişim."),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -74,7 +76,7 @@ namespace FreeCourse.IdentityServer
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
-                        "roles", "basket_fullpermission","discount_fullpermission"
+                        "roles", "basket_fullpermission","discount_fullpermission", "order_fullpermission"
 
 
                     },
