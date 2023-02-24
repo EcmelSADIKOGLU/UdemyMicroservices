@@ -1,5 +1,3 @@
-﻿using FreeCourse.Services.Discount.Services;
-using FreeCourse.Shared.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -13,11 +11,10 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FreeCourse.Services.Discount
+namespace FreeCourse.Services.FakePayment
 {
     public class Startup
     {
@@ -31,24 +28,13 @@ namespace FreeCourse.Services.Discount
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddScoped<IDiscountService, DiscountService>();
-
-            //id "sub" key'i olarak gelsin nameidentifier olarak gelmesin diye
-            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
-
-            //IdentityToken ile userId okumak için
-            services.AddHttpContextAccessor();
-            services.AddScoped<ISharedIdentityService, SharedIdentityService>();
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {
                 options.Authority = Configuration["IdentityServerURL"];
-                options.Audience = "resource_discount";
+                options.Audience = "resource_fake_payment";
                 options.RequireHttpsMetadata = false;
             });
 
-            //bu kısımda sisteme giriş yapmış bir kullanıcı gerekli
             var requreAuthorize = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
             services.AddControllers(opt =>
             {
@@ -57,7 +43,7 @@ namespace FreeCourse.Services.Discount
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FreeCourse.Services.Discount", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FreeCourse.Services.FakePayment", Version = "v1" });
             });
         }
 
@@ -68,7 +54,7 @@ namespace FreeCourse.Services.Discount
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FreeCourse.Services.Discount v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FreeCourse.Services.FakePayment v1"));
             }
 
             app.UseRouting();
